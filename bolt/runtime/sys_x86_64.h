@@ -171,8 +171,9 @@ uint64_t __exit(uint64_t code) {
 #if !defined(__APPLE__)
 // We use a stack-allocated buffer for string manipulation in many pieces of
 // this code, including the code that prints each line of the fdata file. This
-// buffer needs to accommodate large function names, but shouldn't be arbitrarily
-// large (dynamically allocated) for simplicity of our memory space usage.
+// buffer needs to accommodate large function names, but shouldn't be
+// arbitrarily large (dynamically allocated) for simplicity of our memory space
+// usage.
 
 // Declare some syscall wrappers we use throughout this code to avoid linking
 // against system libc.

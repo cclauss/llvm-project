@@ -346,8 +346,8 @@ public:
   /// Write out entries in to .debug_addr section for CUs.
   virtual std::optional<uint64_t> finalize(const size_t BufferSize);
 
-  /// Return buffer with all the entries in .debug_addr already written out using
-  /// update(...).
+  /// Return buffer with all the entries in .debug_addr already written out
+  /// using update(...).
   virtual std::unique_ptr<AddressSectionBuffer> releaseBuffer() {
     return std::move(Buffer);
   }
